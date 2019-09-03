@@ -1,0 +1,28 @@
+<div class="exit-popup">
+  <div class="exit-popup__l-side">
+    <p class="exit-popup__title-1">Получите на почту <br>3 материала</p>
+    <p class="exit-popup__title-2">благодаря которым вы уже сегодня <br>залатаете дыры в бухгалтерии <br>и подготовитесь к приходу <br>налоговой и УБЭП</p>
+    
+    <form action="sendmail/send.php" method="post" class="exit-popup__form">
+      <div class="exit-popup__form-group">
+        <input type="tel" class="block-final__input" id="exit-popup__phone" name="phone" placeholder="+7(___)___-__-__" required>
+      </div>
+ 
+      <div class="exit-popup__input-field">
+        <input type="email" class="block-final__input" id="exit-popup_email" name="email" placeholder="Ваша почта" required>
+      </div>
+      
+      <input type="submit" class="exit-popup__submit yellow-btn yellow-btn--w264" name="Получить материалы" value="Получить материалы">
+      <input name='reason' type='hidden' value='Получить материалы'>
+      
+      <div class="accept-conf exit-popup__accept-conf">
+        <input type="checkbox" id="accept-conf-4" class="accept-conf__input" name="accept-confidentiality" required checked>
+        <label for="accept-conf-4" class="accept-conf__label">Согласен с политикой конфиденциальности сайта</label>
+      </div>
+    </form>
+    
+  </div>
+  <div class="exit-popup__r-side">
+    @@include("../../blanks-block/blanks-block.html")
+  </div>
+</div>

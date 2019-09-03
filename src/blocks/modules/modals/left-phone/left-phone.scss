@@ -1,0 +1,210 @@
+.left-phone {
+  padding: 35px;
+  display: flex;
+
+  @media (max-width: 900px) {
+    padding: 10px;
+  }
+
+  @media (max-width: 600px) {
+    display: block;
+  }
+
+  &__pic {
+    width: 303px;
+    text-align: center;
+    padding-left: 22px;
+    padding-top: 32px;
+    margin-right: 46px;
+
+    @media (max-width: 900px) {
+      margin-right: 10px;
+      width: 200px;
+    }
+
+    @media (max-width: 600px) {
+      width: 150px;
+      padding-left: 0;
+      padding-top: 0;
+      margin: 0 auto;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__r-side {
+    padding-left: 5px;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+
+    @media (max-width: 600px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  &__position {
+    font-weight: 400;
+    font-size: 14px;
+
+    @media (max-width: 900px) {
+      font-size: 12px;
+    }
+  }
+
+  &__form {
+    flex-grow: 1;
+  }
+
+  &__title-1 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 8px;
+
+    @media (max-width: 900px) {
+      font-size: 20px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 14px;
+      line-height: normal;
+    }
+  }
+
+  &__title-2 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 22px;
+
+    @media (max-width: 900px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 14px;
+      line-height: normal;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__form-group {
+    margin-bottom: 28px;
+
+    @media (max-width: 900px) {
+      margin-bottom: 15px;
+    }
+
+    &.left-phone__form-group--lowm {
+      margin-bottom: 12px;
+
+      @media (max-width: 900px) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &.left-phone__form-group--lowm-2 {
+      margin-bottom: 18px;
+
+      @media (max-width: 900px) {
+        margin-bottom: 10px;
+      }
+    }
+
+    .datepicker {
+      display: block;
+    }
+  }
+
+  &__radios {
+    display: flex;
+    padding-top: 8px;
+  }
+
+  &__radios-input {
+    display: none;
+  }
+
+  &__radios-label {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    padding-left: 18px;
+    height: 12px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 12px;
+    
+    cursor: pointer;
+    
+
+    &:first-of-type {
+      margin-right: 14px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 12px;
+      line-height: normal;
+      height: auto;
+    }
+  }
+
+  &__radios-label::before {
+    @include size(12px);
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+
+    border: 1px solid #828282;
+  }
+
+  &__radios-input:checked + &__radios-label::before {
+    border: 1px solid #e18f0b;
+    padding: 2px;
+    background-color: #f9b037;
+    background-clip: content-box;
+  }
+
+  &__time {
+    text-align: center;
+  }
+
+  &__accept-conf {
+    margin-top: 10px;
+  }
+
+  &__submit {
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+
+  }
+}
+
+.popup-left-phone {
+  width: 825px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 900px) {
+    width: 600px;
+  }
+
+  @media (max-width: 600px) {
+    width: 290px;
+  }
+}

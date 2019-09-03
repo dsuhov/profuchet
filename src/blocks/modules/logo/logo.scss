@@ -1,0 +1,48 @@
+.site-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+
+  @media (max-width: $phone-portrait) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  &__img {
+    flex: 0 0 133px;
+    width: 133px;
+    height: 72px;
+    margin-right: 18px;
+
+    @media (max-width: $phone-portrait) {
+      flex: 0 0 auto;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: $iPhoneX) {
+      width: 100%;
+      height: auto;
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    @include gotham-regular-14-20;
+    flex: 1 1 auto;
+    max-width: 250px;
+    padding-top: 4px;
+
+    @media (max-width: $iPhoneX) {
+      max-width: 120px;
+    }
+
+    @media (max-width: $phone-portrait) {
+      padding-top: 0;
+      text-align: center;
+      display: none;
+    }
+  }
+}

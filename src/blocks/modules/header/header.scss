@@ -1,0 +1,136 @@
+.header {
+  padding-top: 26px;
+
+  @media (max-width: $iPhoneX) {
+    padding-top: 15px;
+  }
+
+  &__content {
+    // display: flex;
+
+    // @media (max-width: $size-big) {
+    //   justify-content: space-around;
+    // }
+
+    // @media (max-width: $size-tablet) {
+    //   flex-direction: column;
+    //   align-items: center;@media (max-width: $iPhoneX)
+    // }
+  }
+
+  &__top-content {
+    display: flex;
+
+    @media (max-width: $size-big) {
+      justify-content: space-around;
+    }
+
+    @media (max-width: $size-tablet) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: $phone-portrait) {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  &__logo {
+    margin-right: 42px;
+
+    @media (max-width: $size-big) {
+      margin-right: 0;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: $iPhoneX) {
+      margin-right: 20px;
+    }
+
+    @media (max-width: $phone-portrait) {
+      margin: 0;
+      margin-right: 6px;
+    }
+  }
+
+  &__col-1 {
+    display: flex;
+
+    @media (max-width: $size-big) {
+      // flex-direction: column;
+    }
+  }
+
+  &__col-2 {
+    margin-left: auto;
+    position: relative;
+
+    @media (max-width: $size-big) {
+      position: initial;
+      margin: 0;
+    }
+
+    @media (min-width: 480px) and (max-width: $size-tablet) {
+      display: flex;
+      align-items: center;
+    }
+
+    @media (max-width: $phone-portrait) {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    display: flex;
+    padding-top: 5px;
+
+    @media (max-width: $size-big) {
+      padding-top: 0;
+    }
+
+    @media (max-width: $iPhoneX) {
+      margin-bottom: 14px;
+    }
+
+    @media (max-width: $phone-portrait) {
+      display: none;
+    }
+  }
+
+  &__info-1 {
+    margin-right: 40px;
+
+    @media (max-width: $size-big) {
+      margin-right: 20px;
+    }
+  }
+
+  &__backcall-btn {
+    position: absolute;
+    top: 34px;
+    right: 0;
+
+    @media (max-width: $size-big) {
+      position: initial;
+      padding-top: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: $iPhoneX) {
+      width: 150px;
+      padding-top: 0;
+      
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+    @media (max-width: $size-tablet) {
+      margin-top: 0;
+      margin-left: 10px;
+    }
+
+    @media (max-width: $phone-portrait) {
+      margin: 0 auto;
+    }
+  }
+}

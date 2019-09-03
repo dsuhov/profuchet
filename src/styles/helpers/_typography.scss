@@ -1,0 +1,194 @@
+@mixin gotham-regular-14-20 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (max-width: $laptop) {
+    font-size: 13px;
+    line-height: normal;
+  }
+
+  @media (max-width: $iPhoneX) {
+    font-size: 12px;
+    
+  }
+}
+
+@mixin gotham-regular-14-18 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (max-width: $laptop) {
+    font-size: 12px;
+    line-height: normal;
+  }
+}
+
+@mixin gotham-regular-16-26 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+
+  @media (max-width: $size-tablet) {
+    line-height: normal;
+  }
+
+  @media (max-width: $phone-portrait) {
+    font-size: 13px;
+  }
+}
+
+@mixin gotham-regular-18 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: normal;
+
+
+  @media (max-width: $iPhoneX) {
+    font-size: 14px;
+  }
+}
+
+@mixin gotham-regular-24-40 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 40px;
+
+  @media (max-width: $laptop) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (max-width: $size-tablet) {
+    font-size: 17px;
+    line-height: 19px;
+  }
+
+  @media (max-width: $phone-portrait) {
+    font-size: 14px;
+    line-height: normal;
+  }
+}
+
+@mixin gotham-regular-36-47 {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 47px;
+
+  @media (max-width: $size-big) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  @media (max-width: $size-tablet) {
+    font-size: 24px;
+    line-height: normal;
+  }
+
+  @media (max-width: $phone-portrait) {
+    font-size: 18px;
+    line-height: normal;
+  }
+}
+
+@mixin gotham-medium-14-22 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@mixin gotham-medium-24 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: normal;
+
+  @media (max-width: $size-tablet) {
+    font-size: 18px;
+  }
+
+  @media (max-width: $phone-portrait) {
+    font-size: 16px;
+  }
+}
+
+@mixin gotham-bold-18-26 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+
+  @media (max-width: $laptop) {
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  @media (max-width: $iPhoneX) {
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  @media (max-width: $phone-portrait) {
+    font-size: 14px;
+  }
+}
+
+@mixin gotham-bold-20-22 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+
+  @media (max-width: $iPhoneX) {
+    font-size: 18px;
+    line-height: normal;
+  }
+
+  @media (max-width: $phone-portrait) {
+    font-size: 16px;
+  }
+}
+
+@mixin gotham-bold-20-29 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+
+  @media (max-width: $iPhoneX) {
+    font-size: 18px;
+    line-height: normal;
+  }
+
+  @media (max-width: $phone-portrait) {
+    font-size: 14px;
+  }
+}
+
+@mixin gotham-bold-36-47 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 47px;
+
+  @media (max-width: $laptop) {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  @media (max-width: $size-tablet) {
+    font-size: 20px;
+    line-height: normal;
+  }
+
+  @media (max-width: $phone-portrait) {
+    font-size: 16px;
+  }
+}
+
+@mixin gotham-black-32-42 {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 42px;
+
+  @media (max-width: $iPhoneX) {
+    font-size: 28px;
+    line-height: normal;
+  }
+}

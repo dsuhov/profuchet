@@ -1,0 +1,44 @@
+<div class="quiz" id="quiz-desktop">
+  <div class="quiz__edge edge">
+    
+    <div class="edge__top">
+      <div class="edge__bg edge__top-left"></div>
+      <div class="edge__top-center"></div>
+      <div class="edge__bg edge__top-right"></div>
+    </div>
+    
+    <div class="edge__bottom">
+      <div class="edge__bg edge__bottom-left"></div>
+      <div class="edge__bottom-center"></div>
+      <div class="edge__bg edge__bottom-right"></div>
+    </div>
+
+    <div class="edge__left"></div>
+    <div class="edge__right"></div>
+    
+  </div>
+
+  <div class="quiz__content">
+    <div class="quiz__l-side">
+      <div class="quiz__steps quiz-steps">
+        <div class="quiz-steps__title">Шаг  <span class="quiz-steps__current-num">1</span> из 5</div>
+        <div class="quiz-steps__scale">
+          <div id="scale-1" class="quiz-steps__scale-item quiz-steps__scale-item--active">1</div>
+          <div id="scale-2" class="quiz-steps__scale-item">2</div>
+          <div id="scale-3" class="quiz-steps__scale-item">3</div>
+          <div id="scale-4" class="quiz-steps__scale-item">4</div>
+          <div id="scale-5" class="quiz-steps__scale-item">5</div>
+        </div>
+      </div>
+
+      <div class="quiz__questions quiz-questions">
+        @@include("./quiz-questions.html")
+      </div>
+
+      <div class="quiz__controls quiz-controls">
+        <button class="quiz-controls__btn yellow-btn yellow-btn--test">Далее</button>
+        <button class="quiz-controls__btn-return quiz-controls__btn-return--hidden">Назад</button>
+      </div>
+    </div>
+  </div>
+</div>

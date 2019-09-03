@@ -1,0 +1,7 @@
+@function rem($px) {
+    @return ($px / 16) +rem;
+}
+
+@function calcHeight($width, $height, $newWidth) {
+    @return ceil(($height/$width)*$newWidth);
+}

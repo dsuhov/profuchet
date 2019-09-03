@@ -1,0 +1,24 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.wrapper-bg-top {
+  background: url("../img/bg-circle.png") center top -360px / 100% auto no-repeat,
+    url("../img/bg-circle.png") center bottom -200px / 100% auto no-repeat,
+    linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(248, 248, 255, 1) 100%);
+  
+  @media (max-width: $size-tablet) {
+    background: url("../img/bg-circle_tablet.png") center top -70px / 100% auto no-repeat, linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(248, 248, 255, 1) 100%);
+  }
+
+  &.wrapper-bg-top--2 {
+    background: url("../img/bg-circle.png") center top -360px / 100% auto no-repeat,
+    linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(248, 248, 255, 1) 100%);
+  
+  @media (max-width: $size-tablet) {
+    background: url("../img/bg-circle_tablet.png") center top -70px / 100% auto no-repeat, linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(248, 248, 255, 1) 100%);
+  }
+  }
+}

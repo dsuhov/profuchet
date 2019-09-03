@@ -1,0 +1,123 @@
+.quiz { 
+  box-sizing: border-box;
+  position: relative;
+  padding: 35px 46px;
+  z-index: 1;
+
+  @media (max-width: 600px) {
+    padding: 20px 46px;
+    padding-right: 52px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: calc(100% - 98px);
+    height: calc(100% - 70px);
+    box-shadow: 0px 21px 100px 80px rgba(68, 131, 156, 0.25);
+    z-index: -1;
+    left: 46px;
+    top: 35px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 90%;
+    height: 12px;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #7baec2;
+    border-radius: 0 0 12px 12px;
+
+    @media (max-width: $size-tablet) {
+      height: 6px;
+      bottom: -6px;
+      border-radius: 0 0 6px 6px;
+    }
+  }
+
+  &#quiz-popup {
+    z-index: 10;
+    &::before, &::after {
+      display: none;
+    }
+  }
+
+  &__content {
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 40px 32px;
+
+    &.quiz-popup {
+      background-color: #fff;
+      display: flex;
+      padding: 40px 32px 20px;
+
+      @media (max-width: $phone-portrait) {
+        padding: 20px 12px;
+      }
+    }
+
+    @media (max-width: $size-tablet) {
+      padding: 20px 12px;
+    }
+
+    @media (max-width: $phone-portrait) {
+      padding: 15px 4px;
+    }
+  }
+
+  &__steps {
+    margin-bottom: 32px;
+
+    &.quiz-popup {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (max-width: $size-tablet) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 420px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__r-side {
+    margin-left: auto;
+    width: 310px;
+    flex-shrink: 0;
+
+    @media (max-width: $laptop) {
+      display: none;
+    }
+  }
+
+  &__r-side-title {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 32px;
+  }
+
+  &__questions {
+    min-height: 300px;
+
+    @media (max-width: $size-tablet) {
+      min-height: auto;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+#popup-quiz {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@import "edge";
+@import "quiz-steps";
+@import "quiz-controls";
+@import "quiz-questions";

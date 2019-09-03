@@ -1,0 +1,139 @@
+.thanks-page {
+
+  &__content {
+    padding: 70px 31px 100px;
+    display: flex;
+
+    @media (max-width: 600px) {
+      padding: 20px 0 10px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__img-wrapper {
+    width: 404px;
+    flex-shrink: 0;
+    margin-right: 80px;
+
+    @media (max-width: 900px) {
+      width: 200px;
+      height: auto;
+      margin-right: 40px;
+    }
+
+    @media (max-width: 600px) {
+      width: 100px;
+      margin-right: 20px;
+    }
+
+    @media (max-width: $phone-portrait) {
+      margin-right: 12px;
+    }
+  }
+
+  &__r-block {
+    padding-top: 38px;
+    padding-bottom: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media (max-width: 600px) {
+      padding-top: 0;
+    }
+  }
+
+  &__title-1 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+
+    margin-bottom: 10px;
+
+    @media (max-width: 900px) {
+      font-size: 18px;
+      line-height: normal;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: $phone-portrait) {
+      font-size: 14px;
+    }
+  }
+
+  &__title-2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+
+    margin-bottom: 50px;
+
+    @media (max-width: 900px) {
+      font-size: 20px;
+      line-height: normal;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: $phone-portrait) {
+      font-size: 14px;
+    }
+  }
+
+  &__to-mail {
+    position: relative;
+    display: inline-block;
+    color: #2e58a6;
+    font-weight: 400;
+    font-size: 18px;
+
+    @media (max-width: 600px) {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: $phone-portrait) {
+      font-size: 14px;
+    }
+  }
+
+  &__name-block {
+    margin-top: auto;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  &__position {
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  &__arrow {
+    position: absolute;
+    right: -27px;
+    top: 4px;
+    z-index: 10;
+    width: 20px;
+    height: 15px;
+    fill: #2e58a6;
+
+    @media (max-width: $phone-portrait) {
+      right: -27px;
+      top: 2px;
+    }
+  }
+}

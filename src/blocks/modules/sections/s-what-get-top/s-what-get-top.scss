@@ -1,0 +1,70 @@
+.s-what-get-top {
+
+  &__content {
+    display: flex;
+
+    @media (max-width: $size-big) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__heading {
+    @include gotham-bold-36-47;
+    max-width: 435px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 92px;
+
+    @media (max-width: $laptop) {
+      margin-bottom: 60px;
+    }
+
+    @media (max-width: $size-tablet) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__lblock {
+    flex: 1 1 50%;
+    margin-right: 80px;
+
+    @media (max-width: $size-big) {
+      width: 700px;
+      margin: 0 auto;
+      
+    }
+
+    @media (max-width: $size-tablet) {
+      width: 440px;
+    }
+
+    @media (max-width: $phone-portrait) {
+      
+      width: 100%;
+    }
+  }
+
+  &__rblock {
+    flex: 1 1 50%;
+
+    @media (max-width: $size-big) {
+      order: -1;
+      width: 700px;
+      margin: 0 auto;
+      margin-bottom: 80px;
+    }
+
+    @media (max-width: $size-tablet) {
+      width: 440px;
+    }
+
+    @media (max-width: $phone-portrait) {
+      margin-bottom: 48px;
+      width: 100%;
+    }
+  }
+}
+
+@import "wg-lblock/wg-lblock";
+@import "wg-rblock/wg-rblock";

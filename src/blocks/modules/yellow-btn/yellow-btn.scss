@@ -1,0 +1,149 @@
+.yellow-btn {
+  @include gotham-medium-24;
+  position: relative;
+  width: 366px;
+  height: 95px;
+  border-radius: 47px;
+  cursor: pointer;
+  overflow: hidden;
+
+  box-shadow: 0 40px 40.94px 5.06px rgba(255, 153, 0, 0.18),
+    0 0 49.7px 20.3px rgba(246, 168, 0, 0.14);
+
+  background: url("../img/y-btn-95.png") no-repeat;
+  background-color: rgba(255, 153, 0, 1);
+  border: none;
+  outline: none;
+  
+  color: $text-color;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80px;
+    width: 70px;
+    height: 100%;
+    transform: skewX(-35deg);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0) 100%);
+    // animation: move-blick 1.8s linear infinite;
+  }
+}
+
+.yellow-btn.yellow-btn--s-top {
+  font-weight: 500;
+  font-size: 24px;
+
+  @media (max-width: $laptop) {
+    background: url("../img/y-btn-w300.png") no-repeat;
+    box-shadow: 0 14px 14px 5px rgba(255, 153, 0, 0.18),
+      0 0 16px 8px rgba(246, 168, 0, 0.14);
+    width: 290px;
+    height: 75px;
+    border-radius: 37px;
+  }
+
+  @media (max-width: 360px) {
+    width: 264px;
+    height: 56px;
+    background: url("../img/y-btn-w264.png") no-repeat;
+    box-shadow: 0px 0px 27.84px 4.16px rgba(246, 168, 0, 0.17); 
+  }
+}
+
+.yellow-btn.yellow-btn--adv {
+  width: 544px;
+  background: url("../img/y-btn-w544.png") no-repeat;
+
+  @media (max-width: $size-tablet) {
+    width: 366px;
+    background: url("../img/y-btn-95.png") no-repeat;
+  }
+
+  @media (max-width: $phone-portrait) {
+    width: 290px;
+    height: 75px;
+    background: url("../img/y-btn-w300.png") no-repeat;
+  }
+}
+
+.yellow-btn.yellow-btn--test {
+  width: 230px;
+  height: 78px;
+  background: url("../img/y-btn-w230.png") no-repeat;
+  box-shadow: 0px 0px 49.7px 20.3px rgba(246, 168, 0, 0.14);
+
+  @media (max-width: $size-tablet) {
+    box-shadow: 0px 0px 27.84px 4.16px rgba(246, 168, 0, 0.17);
+    width: 180px;
+    height: 61px;
+    background: url("../img/y-btn-w180.png") no-repeat;
+  }
+
+  @media (max-width: $phone-portrait) {
+    width: 155px;
+    height: 53px;
+    background: url("../img/y-btn-w155.png") no-repeat;
+  }
+}
+
+.yellow-btn.yellow-btn--quiz-final {
+  width: 323px;
+  height: 62px;
+  background: url("../img/y-btn-w323.png") no-repeat;
+  box-shadow: 0px 0px 49.7px 20.3px rgba(246, 168, 0, 0.14);
+  
+  @media (max-width: $phone-portrait) {
+    width: 223px;
+    height: 43px;
+    background: url("../img/y-btn-w223.png") no-repeat;
+    box-shadow: 0px 0px 27.84px 4.16px rgba(246, 168, 0, 0.17);
+  }
+
+  @media (max-width: 420px) {
+    font-size: 18px;
+    width: 230px;
+    height: 78px;
+    background: url("../img/y-btn-w230.png") no-repeat;
+  }
+
+  @media (max-width: $sm) {
+    font-size: 16px;
+    width: 180px;
+    height: 61px;
+    background: url("../img/y-btn-w180.png") no-repeat;
+  }
+}
+
+.yellow-btn.yellow-btn--w264 {
+  width: 264px;
+  height: 56px;
+  background: url("../img/y-btn-w264.png") no-repeat;
+  box-shadow: 0px 0px 27.84px 4.16px rgba(246, 168, 0, 0.17); 
+  font-size: 16px;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 43px;
+    background: url("../img/y-btn-w223.png") no-repeat;
+  }
+}
+
+@keyframes move-blick {
+  0% {
+    left: -80px;
+  }
+
+  50% {
+    left: -80px;
+  }
+
+  100% {
+    left: calc(100% + 20px);
+  }
+}

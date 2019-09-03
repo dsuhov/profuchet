@@ -1,0 +1,33 @@
+.gratitude-item {
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  text-decoration: none !important;
+
+  @media (max-width: 600px) {
+    width: 190px;
+  }
+
+  @media (max-width: $phone-portrait) {
+    width: 100%;
+  }
+  
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__title {
+    color: $text-color;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 18px;
+    font-weight: 500;
+    font-size: 18px;
+
+    @media (max-width: 600px) {
+      padding-top: 16px;
+      font-size: 12px;
+    }
+  }
+}

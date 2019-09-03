@@ -1,0 +1,45 @@
+.accept-conf {
+
+  &__label {
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: block;
+    padding-left: 25px;
+
+    font-weight: 400;
+    font-size: 14px;
+
+    @media (max-width: 600px) {
+      font-size: 12px;
+    }
+  }
+
+  &__label::before {
+    position: absolute;
+    content: "";
+    @include size(16px);
+    top: 2px;
+    left: 0;
+    background-image: url("../img/tick.png");
+    background-repeat: no-repeat;
+    background-size: auto 16px;
+    background-position: 0 0;
+
+    @media only screen and (min-resolution: 192dpi) {
+      background-image: url("../img/tick_2x.png");
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__input:checked + &__label::before {
+    background-position: -16px 0;
+
+    @media only screen and (min-resolution: 192dpi) {
+      background-position: -16px 0;
+    }
+  }
+}

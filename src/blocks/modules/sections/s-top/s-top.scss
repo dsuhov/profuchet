@@ -1,0 +1,7 @@
+.s-top {
+  // overflow: hidden;
+
+  @media (max-width: 480px) {
+    overflow: visible;
+  }
+}

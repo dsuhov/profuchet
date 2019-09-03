@@ -1,0 +1,129 @@
+.quiz-questions {
+  padding-left: 2px;
+
+  @media (max-width: $phone-portrait) {
+    padding-left: 0;
+  }
+
+  &__columns {
+    display: flex;
+
+    @media (max-width: $phone-portrait) {
+      display: block;
+    }
+  }
+
+  &__input-col {
+    // flex: 1 1 180px;
+    min-width: 200px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    @media (max-width: $size-tablet) {
+      min-width: auto;
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+
+    @media (max-width: $phone-portrait) {
+      min-width: auto;
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__input-group:not(:last-child) {
+    margin-bottom: 24px;
+
+    @media (max-width: $size-tablet) {
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: $phone-portrait) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__input-group {
+    margin-bottom: 24px;
+    @media (max-width: $phone-portrait) {
+      margin-bottom: 12px;
+    }
+  }
+  
+  &__block-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 47px;
+    margin-bottom: 22px;
+
+    @media (max-width: $size-tablet) {
+      font-size: 20px;
+      margin-bottom: 12px;
+      line-height: normal;
+    }
+
+    @media (max-width: $phone-portrait) {
+      // font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+
+  // LABEL DECORATION BASE
+  &__label {
+    @include gotham-regular-18;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    line-height: 26px;
+    height: 26px;
+    padding-left: 46px;
+
+    @media (max-width: $size-tablet) {
+      line-height: 18px;
+      height: auto;
+      padding-left: 26px;
+    }
+  }
+
+  &__label::before {
+    @include size(26px);
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+
+    border: 2px solid #828282;
+
+    @media (max-width: $size-tablet) {
+      @include size(18px);
+      border: 1px solid #828282;
+    }
+  }
+
+  // LABEL DECORATION CHECKED
+  &__input:checked + &__label::before {
+    border: 2px solid #e18f0b;
+    padding: 4px;
+    background-color: #f9b037;
+    background-clip: content-box;
+
+    @media (max-width: $size-tablet) {
+      border: 1px solid #e18f0b;
+      padding: 2px;
+    }
+  }
+}
+
+@import "block-final";

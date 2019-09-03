@@ -1,0 +1,23 @@
+.backcall-btn {
+  @include gotham-medium-14-22;
+  color: $text-color;
+  cursor: pointer;
+
+  width: 187px;
+  height: 45px;
+  border-radius: 22px;
+  border: none;
+  outline: none;
+  
+  background: linear-gradient(180deg, rgba(185,223,235,1) 0%, rgba(147,196,213,1) 100%), rgb(185,223,235);
+
+  &:hover {
+    background: linear-gradient(0deg, rgba(185,223,235,1) 0%, rgba(147,196,213,1) 100%), rgb(185,223,235);
+  }
+
+  @media (max-width: $iPhoneX) {
+    width: 100%;
+    height: 30px;
+    font-size: 12px;
+  }
+}

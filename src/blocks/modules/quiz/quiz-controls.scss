@@ -1,0 +1,42 @@
+.quiz-controls {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $phone-portrait) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__btn {
+    margin-left: 8px;
+    margin-right: 40px;
+
+    @media (max-width: $size-tablet) {
+      margin-right: 20px;
+      margin-left: 4px;
+    }
+
+    @media (max-width: $phone-portrait) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  &__btn-return {
+    box-sizing: border-box;
+    @include gotham-medium-24;
+    line-height: 28px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.quiz-controls__btn-return--hidden {
+      display: none;
+    }
+  }
+}

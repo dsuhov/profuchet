@@ -1,0 +1,96 @@
+.exit-popup {
+  box-sizing: border-box;
+  padding: 40px 10px 10px 58px;
+  display: flex;
+
+  @media (max-width: $laptop) {
+    flex-direction: column;
+    padding: 14px;
+    padding-left: 50px;
+    padding-top: 40px;
+  }
+
+  @media (max-width: 600px) {
+    padding-left: 14px;
+    padding-top: 16px;
+  }
+
+  &__l-side {
+    flex: 1 1 auto;
+    
+    @media (max-width: 600px) {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__r-side {
+    flex: 1 1 auto;
+    padding-top: 6px;
+    
+    margin-right: 40px;
+
+    @media (max-width: $laptop) {
+      padding-top: 0px;
+      margin-right: 0;
+      order: -1;
+    }
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+  
+  }
+
+  &__title-1 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 34px;
+    margin-bottom: 10px;
+
+    @media (max-width: 600px) {
+      font-size: 20px;
+      line-height: normal;
+    }
+  }
+
+  &__title-2 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 28px;
+
+    @media (max-width: 600px) {
+      font-size: 14px;
+      line-height: normal;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__form-group {
+    margin-bottom: 20px;
+  }
+
+  &__input-field {
+    margin-bottom: 26px;
+  }
+
+  &__accept-conf {
+    padding-top: 26px;
+  }
+}
+
+.popup-exit-popup {
+  width: 948px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: $laptop) {
+    width: 600px;
+  }
+
+  @media (max-width: 600px) {
+    width: 290px;
+  }
+}

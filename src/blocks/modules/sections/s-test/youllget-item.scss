@@ -1,0 +1,137 @@
+.youllget-item {
+  position: relative;
+  padding-top: 118px;
+
+  &__text {
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  // pictures
+  &__pic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../img/youllget-pics.png");
+    background-repeat: no-repeat;
+
+    // pictures size 1
+    &.youllget-item__pic-1 {
+      background-position: 0 0;
+      top: 0;
+      left: -35px;
+      width: 119px;
+      height: 133px;
+    }
+    // pictures size 2
+    &.youllget-item__pic-2 {
+      background-position: 0 -133px;
+      top: 15px;
+      left: -24px;
+      width: 130px;
+      height: 88px;
+    }
+    // pictures size 3
+    &.youllget-item__pic-3 {
+      background-position: -130px -133px;
+      top: 15px;
+      left: -27px;
+      width: 115px;
+      height: 88px;
+    }
+    // pictures size 4
+    &.youllget-item__pic-4 {
+      background-position: -119px 0;
+      top: 12px;
+      left: -39px;
+      width: 137px;
+      height: 92px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .youllget-item {
+    position: relative;
+    padding-top: 0;
+  
+    &__text {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 145px;
+      white-space: nowrap;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: normal;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @media (max-width: $phone-portrait) {
+        font-size: 12px;
+        left: 90px;
+      }
+    }
+  
+    // pictures
+    &__pic {
+      position: initial;
+      margin: 0;
+      margin-right: 15px;
+
+      @media (max-width: $phone-portrait) {
+        margin-right: 5px;
+        transform-origin: left;
+      }
+  
+      // pictures size 1
+      &.youllget-item__pic-1 {
+        background-position: 0 0;
+        top: 0;
+        left: -35px;
+        width: 119px;
+        height: 133px;
+
+        @media (max-width: $phone-portrait) {
+          transform: scale(0.6);
+        }
+      }
+      // pictures size 2
+      &.youllget-item__pic-2 {
+        background-position: 0 -133px;
+        top: 15px;
+        left: -24px;
+        width: 130px;
+        height: 88px;
+        @media (max-width: $phone-portrait) {
+          transform: scale(0.6);
+        }
+      }
+      // pictures size 3
+      &.youllget-item__pic-3 {
+        background-position: -130px -133px;
+        top: 15px;
+        left: -27px;
+        width: 115px;
+        height: 88px;
+        @media (max-width: $phone-portrait) {
+          transform: scale(0.6);
+        }
+      }
+      // pictures size 4
+      &.youllget-item__pic-4 {
+        background-position: -119px 0;
+        top: 12px;
+        left: -39px;
+        width: 137px;
+        height: 92px;
+        @media (max-width: $phone-portrait) {
+          transform: scale(0.6);
+        }
+      }
+    }
+  }
+}

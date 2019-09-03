@@ -1,0 +1,110 @@
+.wg-rblock {
+  position: relative;
+  width: 100%;
+  border-radius: 26px;
+  
+  background: linear-gradient(180deg, rgba(185,223,235,1) 0%, rgba(147,196,213,1) 100%), rgb(185,223,235);
+
+  @media (max-width: $size-big) {
+    min-height: 280px;
+  }
+
+  @media (max-width: $size-tablet) {
+    min-height: auto;
+  }
+
+  @media (max-width: $phone-portrait) {
+    border-radius: 10px;
+  }
+
+  &__pic {
+    position: absolute;
+    right: 48px;
+    bottom: 0;
+    width: 188px;
+    height: 335px;
+
+    background-image: url("../img/yulia-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media only screen and (min-resolution: 192dpi) {
+      background-image: url("../img/yulia-1_2x.png");
+    }
+
+    @media (max-width: $size-tablet) {
+      width: 150px;
+      height: calcHeight(188px, 335px, 150px);
+    }
+
+    @media (max-width: $phone-portrait) {
+      right: 30px;
+      width: 90px;
+      height: calcHeight(188px, 335px, 90px);
+    }
+  }
+
+  &__content {
+    box-sizing: border-box;
+    max-width: 69.5%;
+    padding: 38px 38px 38px 56px;
+
+    @media (max-width: $size-big) {
+      max-width: 66%;
+    }
+
+    @media (max-width: $size-tablet) {
+      padding: 30px;
+      padding-right: 0;
+      max-width: 54%;
+    }
+
+    @media (max-width: $phone-portrait) {
+      padding: 10px;
+      padding-right: 0;
+      max-width: 60%;
+    }
+  }
+  
+  &__heading {
+    @include gotham-bold-20-29;
+    margin-bottom: 15px;
+
+    @media (max-width: $size-tablet) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    @include gotham-regular-16-26;
+  }
+
+  @media (max-width: $size-big) {
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 10;
+      top: calc(50% - 70px);
+      right: -102px;
+      width: 132px;
+      height: 130px;
+  
+      background: url("../img/cross.png") no-repeat;
+  
+      @media (max-width: $size-big) {
+        top: initial;
+        right: initial;
+        bottom: -106px;
+        left: calc(50% - 70px);
+      }
+  
+      @media (max-width: $phone-portrait) {
+        bottom: -65px;
+        left: calc(50% - 40px);
+        width: 80px;
+        height: 80px;
+        background-size: 80px;
+      }
+    }
+  }
+}

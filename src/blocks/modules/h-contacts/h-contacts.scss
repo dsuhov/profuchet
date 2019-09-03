@@ -1,0 +1,98 @@
+.h-contacts {
+  display: flex;
+  align-items: center;
+  transform: translateY(-4px);
+
+  @media (max-width: $size-big) {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    transform: translateY(0);
+  }
+
+  @media (min-width: 480px) and (max-width: $size-tablet) {
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  @media (max-width: $phone-portrait) {
+    margin-bottom: 6px;
+  }
+
+  &__socials {
+    display: flex;
+
+    @media (max-width: $size-big) {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: $size-tablet) {
+      margin-bottom: 0;
+      margin-right: 8px;
+    }
+
+    @media (max-width: $phone-portrait) {
+      margin-right: 0;
+      margin-bottom: 6px;
+    }
+  }
+
+  &__tel {
+    @include gotham-bold-20-22;
+    color: $text-color;
+    text-decoration: none;
+    
+    @media (max-width: $size-tablet) {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__soc-whatsapp {
+    display: block;
+    flex-shrink: 0;
+    background: url("../img/icons/whatsapp.png") no-repeat;
+    background-size: cover;
+    width: 21px;
+    height: 21px;
+    margin-right: 19px;
+
+    @media only screen and (min-resolution: 192dpi) {
+      background: url("../img/icons/whatsapp_2x.png") no-repeat;
+      background-size: cover;
+    }
+
+    @media (max-width: $iPhoneX) {
+      width: 18px;
+      height: 18px;
+      margin-right: 14px;
+    }
+  }
+
+  &__soc-telegram {
+    display: block;
+    flex-shrink: 0;
+    background: url("../img/icons/telegram.png") no-repeat;
+    background-size: cover;
+    width: 23px;
+    height: 20px;
+    margin-right: 20px;
+
+    @media only screen and (min-resolution: 192dpi) {
+      background: url("../img/icons/telegram_2x.png") no-repeat;
+      background-size: cover;
+    }
+
+    @media (max-width: $iPhoneX) {
+      margin-right: 0;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

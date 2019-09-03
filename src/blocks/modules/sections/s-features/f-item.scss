@@ -1,0 +1,85 @@
+.f-item {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 212px;
+  padding-right: 60px;
+
+  background-repeat: no-repeat;
+
+  @media (max-width: $laptop) {
+    padding-left: 110px;
+    padding-right: 20px;
+  }
+
+  @media (max-width: $phone-portrait) {
+    padding-right: 0;
+  }
+
+  @media (max-width: $sm) {
+    padding-left: 74px;
+  }
+
+  &__title {
+    @include gotham-bold-18-26;
+    margin-bottom: 16px;
+
+    @media (max-width: $laptop) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+
+    @media (max-width: $laptop) {
+      font-size: 14px;
+      line-height: normal;
+    }
+
+    @media (max-width: $phone-portrait) {
+      font-size: 12px;
+    }
+  }
+
+  &.f-item--calculator {
+    background-image: url("../img/calculator.png");
+    background-position: 32px 6px;
+    
+    @media (max-width: $laptop) {
+      background-position: 0 6px;
+      background-size: 20%;
+    }
+  }
+
+  &.f-item--stamp {
+    background-image: url("../img/stamp.png");
+    background-position: 20px 6px;
+
+    @media (max-width: $laptop) {
+      background-position: 0 6px;
+      background-size: 20%;
+    }
+  }
+
+  &.f-item--blank-pan {
+    background-image: url("../img/blank-pan.png");
+    background-position: 32px 6px;
+
+    @media (max-width: $laptop) {
+      background-position: 0 6px;
+      background-size: 20%;
+    }
+  }
+
+  &.f-item--clock {
+    background-image: url("../img/clock.png");
+    background-position: 20px 6px;
+
+    @media (max-width: $laptop) {
+      background-position: 0 6px;
+      background-size: 20%;
+    }
+  }
+}

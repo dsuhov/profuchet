@@ -1,0 +1,123 @@
+.quiz-steps {
+  display: flex;
+
+  @media (max-width: $size-tablet) {
+    flex-direction: column;
+  }
+
+  &__title {
+    padding-top: 4px;
+    font-weight: 500;
+    font-size: 22px;
+
+    @media (max-width: $size-tablet) {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__scale {
+    margin-left: auto;
+    display: flex;
+
+    &.quiz-popup {
+      margin-top: 20px;
+      margin-left: 0;
+    }
+
+    @media (max-width: $size-tablet) {
+      margin-left: 0;
+    }
+
+    @media (max-width: 420px) {
+      display: none;
+    }
+  }
+
+  &__scale-item {
+    position: relative;
+    @include size(38px);
+    border-radius: 50%;
+    text-align: center;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 38px;
+    color: #7097a6;
+
+    background-color: #fff; 
+    box-shadow: 0px 2px 6px 0px rgba(92, 167, 195, 0.28);
+
+    &:not(:last-child) {
+      margin-right: 26px;
+    }
+
+    &:not(:last-child)::after {
+      position: absolute;
+      content: "";
+      width: 26px;
+      height: 1px;
+      background-color: rgba(92, 167, 195, 0.3);
+      top: 19px;
+      left: 100%;
+    }
+
+    // ACTIVE
+    &.quiz-steps__scale-item--active {
+      box-shadow: none;
+      color: $text-color;
+      background: linear-gradient(0deg, rgba(249,175,54,1) 0%, rgba(253,215,149,1) 100%), rgb(249,175,54);
+    }
+
+    @media (max-width: $size-tablet) {
+      position: relative;
+      @include size(24px); // @include size(38px);
+      border-radius: 50%;
+      text-align: center;
+
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: #7097a6;
+
+      background-color: #fff; 
+      box-shadow: 0px 2px 6px 0px rgba(92, 167, 195, 0.28);
+
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+
+      &:not(:last-child)::after {
+        position: absolute;
+        content: "";
+        width: 16px;
+        height: 1px;
+        background-color: rgba(92, 167, 195, 0.3);
+        top: 12px;
+        left: 100%;
+      }
+
+      // ACTIVE
+      &.quiz-steps__scale-item--active {
+        box-shadow: none;
+        color: $text-color;
+        background: linear-gradient(0deg, rgba(249,175,54,1) 0%, rgba(253,215,149,1) 100%), rgb(249,175,54);
+      }
+    }
+
+    @media (max-width: 360px) {
+      @include size(18px);
+      font-size: 12px;
+      line-height: 18px;
+
+      &:not(:last-child) {
+        margin-right: 14px;
+      }
+
+      &:not(:last-child)::after {
+        width: 14px;
+        top: 8px;
+      }
+    }
+  }
+}

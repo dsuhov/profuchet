@@ -1,0 +1,22 @@
+.adv-card-1 {
+  padding-top: 270px;
+  padding-left: 54px;
+
+  @media (max-width: $size-big) {
+    padding-top: 200px;
+    // padding-left: 300px;
+  }
+
+  &__pic {
+    left: -10px;
+    width: 394px;
+    height: 264px;
+    background: url("../img/adv-blank-1.png") no-repeat;
+
+    @media (max-width: $size-big) {
+      width: 290px;
+      height: calcHeight(394px, 264px, 290px);
+      background-size: 290px calcHeight(394px, 264px, 290px);
+    }
+  }
+}

@@ -1,0 +1,154 @@
+.s-gratitude {
+  padding-top: 120px;
+
+  &__top-heading {
+    @include gotham-bold-36-47;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__subheading {
+    @include gotham-regular-24-40;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__row {
+    position: relative;
+    padding: 0 30px;
+    
+    @media (max-width: $phone-portrait) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__btn {
+    @include size(54px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    cursor: pointer;
+    position: absolute;
+    top: calc(40% - 25px);
+    
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: #93c3d5;
+
+    @media (max-width: $size-tablet) {
+      @include size(30px);
+      top: calc(50% - 15px);
+    }
+    
+    &:hover {
+      box-shadow: 0 11px 13.28px 2.72px rgba(92, 167, 195, 0.17);
+    }
+    
+    svg {
+      fill: #fff;
+      width: 11px;
+      height: 18px;
+
+      @media (max-width: $size-tablet) {
+        transform: scale(0.8);
+      }
+    }
+
+    &.s-gratitude__btn {
+      &--prev {
+        left: 20px;
+
+        @media (max-width: $size-tablet) {
+          left: 15px;
+        }
+
+        @media (max-width: $phone-portrait) {
+          left: -5px;
+        }
+
+        svg {
+          transform: rotate(180deg);
+          @media (max-width: $size-tablet) {
+            transform: rotate(180deg) scale(0.8);
+          }
+        }
+      }
+
+      &--next {
+        right: 20px;
+
+        @media (max-width: $size-tablet) {
+          right: 15px;
+        }
+
+        @media (max-width: $phone-portrait) {
+          right: -5px;
+        }
+      }
+    }
+  }
+
+  &__achievements {
+    padding-top: 135px;
+    padding-left: 20px;
+    display: flex;
+    
+    & > * {
+      flex-grow: 1;
+    }
+
+    @media (max-width: $size-big) {
+      padding-left: 0;
+      padding-top: 100px;
+      justify-content: space-between;
+
+      & > * {
+        flex-grow: 0;
+      }
+    }
+
+    @media (max-width: $laptop) {
+      padding-top: 70px;
+      align-items: center;
+    }
+
+    @media (max-width: $iPhoneX) {
+      padding-top: 40px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    @media (max-width: $phone-portrait) {
+      padding-top: 20px;
+    }
+  }
+
+  &__achievement-1 {
+    margin-right: 80px;
+    @media (max-width: $size-big) {
+      margin-right: 10px;
+    }
+
+    @media (max-width: $phone-portrait) {
+      margin-right: 0;
+    }
+  }
+
+  &__achievement-2{
+    @media (max-width: $size-big) {
+      margin-right: 10px;
+    }
+
+    @media (max-width: $phone-portrait) {
+      margin-right: 0;
+    }
+  }
+}
+
+@import "gratitude-item";
+@import "achievement";

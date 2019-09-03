@@ -1,0 +1,98 @@
+.s-persons {
+  padding-top: 50px;
+
+  @media (max-width: $iPhoneX) {
+    padding-top: 40px;
+  }
+
+  @media (max-width: $phone-portrait) {
+    padding-top: 20px;
+  }
+
+  &__top-heading {
+    @include gotham-bold-36-47;
+    text-align: center;
+    margin-bottom: 78px;
+
+    @media (max-width: $iPhoneX) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: $phone-portrait) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__row {
+    display: flex;
+
+    @media (max-width: 1250px) {
+      justify-content: center;
+    }
+
+    @media (max-width: $laptop) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+
+  &__director {
+    flex: 0 0 auto;
+    margin-right: 15px;
+
+    @media (max-width: $laptop) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__slider-wrapper {
+    position: relative;
+    width: 620px;
+
+    @media (max-width: 1250px) {
+      width: 309px;
+    }
+
+    @media (max-width: $laptop) {
+      width: 620px;
+    }
+
+    @media (max-width: $size-tablet) {
+      width: 309px;
+    }
+
+    @media (max-width: $sm) {
+      width: 290px;
+    }
+  }
+
+  &__btn {
+    @include size(54px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: calc(50% - 60px);
+    right: 4px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: #93c3d5;
+
+
+    &:hover {
+      box-shadow: 0 11px 13.28px 2.72px rgba(92, 167, 195, 0.17);
+    }
+
+    svg {
+      fill: #fff;
+      width: 11px;
+      height: 18px;
+    }
+  }
+}
+
+@import "person-card/person-card";

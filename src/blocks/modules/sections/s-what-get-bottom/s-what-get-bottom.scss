@@ -1,0 +1,64 @@
+.s-what-get-bottom {
+  padding-top: 80px;
+  padding-bottom: 70px;
+
+  @media (max-width: $size-big) {
+    padding-top: 50px;
+  }
+
+  @media (max-width: $size-tablet) {
+    padding-top: 25px;
+  }
+
+  &__top-line {
+    @include gotham-regular-36-47;
+    text-align: center;
+    margin-bottom: 52px;
+
+    @media (max-width: $size-big) {
+      margin-bottom: 40px;
+    }
+  
+    @media (max-width: $size-tablet) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__materials {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 45px;
+
+    @media (max-width: $size-big) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+
+  &__adv-card-1 {
+    @media (max-width: $size-big) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__adv-card-2 {
+    padding-top: 36px;
+
+    @media (max-width: $size-big) {
+      padding: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__adv-card-3 {
+    @media (max-width: $size-big) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__btn {
+    text-align: center;
+  }
+}
+
+@import "./adv-card/adv-card";

@@ -1,0 +1,137 @@
+.s-test {
+  padding-top: 80px;
+  margin-bottom: 126px;
+
+  @media (max-width: $iPhoneX) {
+    padding-top: 40px;
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: $phone-portrait) {
+    padding-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  &__top-heading {
+    @include gotham-bold-36-47;
+    text-align: center;
+    margin-bottom: 34px;
+
+    @media (max-width: $iPhoneX) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__overheading, &__youllget-title {
+    @include gotham-regular-24-40;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  &__youllget {
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  &__youllget-title {
+    text-align: center;
+    margin-bottom: 14px;
+  }
+
+  &__youllget-row {
+    box-sizing: border-box;
+    display: flex;
+    padding-left: 80px;
+    justify-content: space-evenly;
+
+    @media (max-width: $size-big) {
+      padding-left: 0;
+      justify-content: space-evenly;
+    }
+
+    @media (max-width: 900px) {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 600px) {
+      // flex-direction: column;
+      // flex-wrap: nowrap;
+      // justify-content: flex-start;
+      // align-items: center;
+    }
+  }
+
+  &__youllget-item-1,
+  &__youllget-item-2,
+  &__youllget-item-3,
+  &__youllget-item-4 {
+    @media (max-width: 900px) {
+      box-sizing: border-box;
+      width: 50%;
+      padding-left: 10%;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: $iPhoneX) {
+      padding-left: 5%;
+    }
+
+    @media (max-width: 600px) {
+      width: 370px;
+      margin: 0 auto;
+      margin-bottom: 15px;
+      padding-left: 0;
+    }
+    @media (max-width: $phone-portrait) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__youllget-item-1 {
+    margin-right: 7.7%;
+
+    @media (max-width: $phone-portrait) {
+      margin-bottom: -15px;
+    }
+  }
+  &__youllget-item-2 {
+    margin-right: 6.2%;
+  }
+
+  &__youllget-item-3 {
+    margin-right: 7.7%;
+  }
+
+  @media (max-width: $size-big) {
+    &__youllget-item-1 {
+      margin-right: 0;
+    }
+  
+    &__youllget-item-2 {
+      margin-right: 0;
+    }
+  
+    &__youllget-item-3 {
+      margin-right: 0;
+    }
+  }
+
+  &__test {
+    padding: 0 100px;
+    padding-top: 46px;
+
+    @media (max-width: 900px) {
+      padding: 0 20px;
+      padding-top: 24px;
+    }
+
+    @media (max-width: 600px) {
+      padding: 0;
+      padding-top: 24px;
+    }
+  }
+}
+
+@import "youllget-item";

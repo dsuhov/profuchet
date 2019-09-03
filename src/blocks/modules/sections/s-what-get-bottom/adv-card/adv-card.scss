@@ -1,0 +1,64 @@
+.adv-card {
+  box-sizing: border-box;
+  position: relative;
+  min-width: 394px;
+  font-size: 16px;
+  line-height: 23px;
+
+  // background-color: rgba(91, 91, 134, 0.4);
+
+  @media (max-width: $size-big) {
+    min-width: 290px;
+    // max-width: 600px;
+    // min-height: 210px;
+    // margin: 0 auto;
+  }
+
+  &__pic {
+    position: absolute;
+    top: 0;
+  }
+
+  &__title {
+    font-weight: 300;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    font-weight: 500;
+    margin-bottom: 22px;
+  }
+
+  &__download {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    font-weight: 400;
+    padding-left: 54px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 24px;
+
+      background-image: url("../img/icons/pdf-icon.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    @media only screen and (min-resolution: 192dpi) {
+      &::before {
+        background-image: url("../img/icons/pdf-icon_2x.png");
+        background-size: 40px 24px;
+      }
+    }
+  }
+}
+
+@import "adv-card-1/adv-card-1";
+@import "adv-card-2/adv-card-2";
+@import "adv-card-3/adv-card-3";

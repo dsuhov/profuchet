@@ -1,0 +1,161 @@
+.person-card {
+  position: relative;
+  width: 290px;
+  padding-bottom: 36px;
+
+  @media (max-width: $sm) {
+    width: 100%;
+  }
+  
+  &.person-card--slider {
+    margin: 0 10px;
+    margin-bottom: 20px;
+
+    @media (max-width: 1280px) {
+      margin: 0 6px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: $sm) {
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: $sm) {
+      width: 290px;
+    }
+  }
+
+  &.person-card--wide {
+    width: 552px;
+
+    @media (max-width: $iPhoneX) {
+      width: 420px;
+    }
+
+    @media (max-width: $phone-portrait) {
+      width: 290px;
+    }
+
+    @media (max-width: $phone-portrait) {
+      padding-bottom: 130px;
+    }
+
+    @media (max-width: $sm) {
+      width: 290px;
+    }
+  }
+
+  &__img-wrapper {
+    width: 270px;
+
+    @media (max-width: $sm) {
+      width: 90%;
+    }
+
+    // decoration element
+    &.person-card__img-wrapper--decor {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        right: -63px;
+        width: 48px;
+        height: 48px;
+        border: 25px solid #94c3d5;
+        border-radius: 50%;
+
+        @media (max-width: $sm) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  &__caption {
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 274px;
+    padding: 18px;
+    text-align: center;
+
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 11px 13.28px 2.72px rgba(92, 167, 195, 0.17);
+    border-radius: 10px;
+
+    @media (max-width: $sm) {
+
+      box-shadow: -10px 11px 13.28px 2.72px rgba(92, 167, 195, 0.17);
+    }
+
+    &.person-card__caption--wide {
+      text-align: left;
+      width: 306px;
+      padding: 37px;
+
+      @media (max-width: $iPhoneX) {
+        padding: 18px;
+        width: 200px;
+      }
+
+      @media (max-width: $phone-portrait) {
+        
+        width: 274px;
+      }
+
+      @media (max-width: $sm) {
+
+        // box-shadow: 0 -11px 13.28px 2.72px rgba(92, 167, 195, 0.17);
+        width: 90%;
+      }
+    }
+
+    @media (max-width: $sm) {
+      width: 90%;
+    }
+  }
+
+  &__c-name {
+    @include gotham-bold-20-22;
+    margin-bottom: 6px;
+
+    @media (max-width: $phone-portrait) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__c-position {
+    @include gotham-regular-18;
+    margin-bottom: 16px;
+
+    @media (max-width: $phone-portrait) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__text {
+    @include gotham-regular-16-26;
+    line-height: 24px;
+    margin-bottom: 12px;
+
+    &.person-card__text--person {
+      line-height: 18px;
+    }
+
+    @media (max-width: $phone-portrait) {
+      margin-bottom: 4px;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.wg-lblock {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  width: 100%;
+  border: 1px solid $halfbaked;
+  border-radius: 26px;
+
+  @media (max-width: $phone-portrait) {
+    border-radius: 10px;
+  }
+  
+  &__pic {
+    position: absolute;
+    top: -24px;
+    left: -150px;
+    width: 448px;
+    height: 493px;
+
+    background-image: url("../img/blank-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media only screen and (min-resolution: 192dpi) {
+      background-image: url("../img/blank-1_2x.png");
+    }
+
+    @media (max-width: $size-tablet) {
+      width: 300px;
+      left: -120px;
+      height: calcHeight(448px, 493px, 300px);
+    }
+
+    @media (max-width: $phone-portrait) {
+      width: 150px;
+      left: -34px;
+      height: calcHeight(448px, 493px, 150px);
+    }
+  }
+
+  &__content {
+    box-sizing: border-box;
+    max-width: 50%;
+    padding: 38px 37px 60px 0;
+
+    @media (max-width: $size-big) {
+      max-width: 58%;
+    }
+
+    @media (max-width: $size-tablet) {
+      padding: 30px;
+      padding-left: 0;
+    }
+
+    @media (max-width: $phone-portrait) {
+      padding: 10px;
+      padding-left: 110px;
+      max-width: none;
+    }
+  }
+  
+  &__heading {
+    @include gotham-bold-20-29;
+    margin-bottom: 20px;
+
+    @media (max-width: $size-tablet) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    @include gotham-regular-16-26;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    top: calc(50% - 70px);
+    right: -102px;
+    width: 132px;
+    height: 130px;
+
+    background: url("../img/cross.png") no-repeat;
+
+    @media (max-width: $size-big) {
+      top: initial;
+      right: initial;
+      bottom: -106px;
+      left: calc(50% - 70px);
+    }
+
+    @media (max-width: $phone-portrait) {
+      bottom: -65px;
+      left: calc(50% - 40px);
+      width: 80px;
+      height: 80px;
+      background-size: 80px;
+    }
+  }
+
+  // move cross to right block
+  @media (max-width: $size-big) {
+    &::after {
+      display: none;
+    }
+  }
+}
