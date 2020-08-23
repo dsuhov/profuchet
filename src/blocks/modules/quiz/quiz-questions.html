@@ -188,21 +188,31 @@
     <div class="quiz-questions__block-final block-final">
       <div class="block-final__top-titles">
         <h2 class="block-final__title-1">Сейчас наш бухгалтер рассчитает <br> вашу экономию за счет аутсорса бухгалтерии</h2>
-        <p class="block-final__title-2">Оставьте ваши данные, чтобы мы прислали вам расчет экономии, стоимость сопровождения и полезные материалы</p>
+        <p class="block-final__title-2"><b>Мы пришлем вам ссылку на</b> рассчет экономии, стоимость сопровождения и полезные материалы</p>
       </div>
       
       <div class="block-final__bottom-line">
-        <p class="block-final__title-3">Также мы закрепим за вами скиду 50% <br>на первый месяц обслуживания</p>
 
         <div class="block-final__input-field">
-          <label for="q1_phone" class="block-final__label">К какому номеру привязать скидку?</label>
+          <p class="block-final__wts-title">Куда прислать ссылку?</p>
+
+          <div class="block-final__where-to-send">
+            <input type="radio" name="Куда_прислать?" value="WhatsApp" id="send-to-whattsapp-1" class="block-final__wts-input">
+            <label for="send-to-whattsapp-1" class="block-final__wts-label">В WhatsApp</label>
+
+            <input type="radio" name="Куда_прислать?" value="Telegram" id="send-to-telegram-1" class="block-final__wts-input">
+            <label for="send-to-telegram-1" class="block-final__wts-label">В Telegram</label>
+
+            <input type="radio" name="Куда_прислать?" value="Viber" id="send-to-viber-1" class="block-final__wts-input">
+            <label for="send-to-viber-1" class="block-final__wts-label">В Viber</label>
+
+            <input type="radio" name="Куда_прислать?" value="SMS" id="send-to-sms-1" class="block-final__wts-input">
+            <label for="send-to-sms-1" class="block-final__wts-label">SMS</label>
+          </div>
+
           <input type="tel" class="block-final__input" id="q1_phone" name="phone" placeholder="+7(___)___-__-__" required>
         </div>
 
-        <div class="block-final__input-field">
-          <label for="q1_phone" class="block-final__label">Куда отправить расчеты и материалы?</label>
-          <input type="email" class="block-final__input" id="q1_email" name="email" placeholder="Ваша почта" required>
-        </div>
 
         <input type="submit" class="yellow-btn yellow-btn--quiz-final block-final__submit" name="submit" value="Получить расчет+материалы">
         <input name='reason' type='hidden' value='Получить расчет+материалы'>

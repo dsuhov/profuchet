@@ -1,7 +1,7 @@
 import $ from "jquery";
 import Inputmask from "inputmask";
 
-if (document.querySelector('q1_phone')) {
+if (document.querySelector('#q1_phone')) {
   $(document).ready(function() {
     var selector = document.getElementById('q1_phone');
     var selector2 = document.getElementById('q2_phone');

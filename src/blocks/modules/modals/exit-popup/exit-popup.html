@@ -1,15 +1,28 @@
 <div class="exit-popup">
   <div class="exit-popup__l-side">
-    <p class="exit-popup__title-1">Получите на почту <br>3 материала</p>
-    <p class="exit-popup__title-2">благодаря которым вы уже сегодня <br>залатаете дыры в бухгалтерии <br>и подготовитесь к приходу <br>налоговой и УБЭП</p>
+    <p class="exit-popup__title-1">Сейчас наш бухгалтер рассчитает<br> вашу экономию за счет аутсорса бухгалтерии</p>
+    <p class="exit-popup__title-2">Оставьте ваши данные, чтобы мы прислали вам расчет экономии, стоимость сопровождения и полезные материалы</p>
     
-    <form action="sendmail/send.php" method="post" class="exit-popup__form">
-      <div class="exit-popup__form-group">
-        <input type="tel" class="block-final__input" id="exit-popup__phone" name="phone" placeholder="+7(___)___-__-__" required>
-      </div>
- 
-      <div class="exit-popup__input-field">
-        <input type="email" class="block-final__input" id="exit-popup_email" name="email" placeholder="Ваша почта" required>
+    <form action="sendmail/send.php" method="post" class="exit-popup__form" onsubmit="ym(54700270, 'reachGoal', 'EX_POPUP_FILLED'); return true;">                      
+      
+      <div class="block-final__input-field">
+        <p class="block-final__wts-title">Куда прислать ссылку?</p>
+
+        <div class="block-final__where-to-send">
+          <input type="radio" name="Куда_прислать?" value="WhatsApp" id="send-to-whattsapp-3" class="block-final__wts-input">
+          <label for="send-to-whattsapp-3" class="block-final__wts-label">В WhatsApp</label>
+
+          <input type="radio" name="Куда_прислать?" value="Telegram" id="send-to-telegram-3" class="block-final__wts-input">
+          <label for="send-to-telegram-3" class="block-final__wts-label">В Telegram</label>
+
+          <input type="radio" name="Куда_прислать?" value="Viber" id="send-to-viber-3" class="block-final__wts-input">
+          <label for="send-to-viber-3" class="block-final__wts-label">В Viber</label>
+
+          <input type="radio" name="Куда_прислать?" value="SMS" id="send-to-sms-3" class="block-final__wts-input">
+          <label for="send-to-sms-3" class="block-final__wts-label">SMS</label>
+        </div>
+
+        <input type="tel" class="block-final__input" id="q4_phone" name="phone" placeholder="+7(___)___-__-__" required>
       </div>
       
       <input type="submit" class="exit-popup__submit yellow-btn yellow-btn--w264" name="Получить материалы" value="Получить материалы">

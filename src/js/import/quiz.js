@@ -132,6 +132,18 @@ $(document).ready(function() {
         type: 'inline'
       }
     });
+
+    $('.yellow-btn--adv').on('mfpClose', function(e /*, params */) {
+      setTimeout(() => {
+        $.magnificPopup.open({
+          items: {
+            src: '#exit-popup'
+          },
+          // type: 'inline',
+          showCloseBtn: false
+        });
+      }, 300)
+    });
   }
   
 });
