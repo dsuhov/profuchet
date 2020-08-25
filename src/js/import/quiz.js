@@ -103,11 +103,42 @@ class Quiz {
   
   finalizeTest() {
     this.blocks.hide();
-    this.rootNode.find('.quiz__steps').hide();
+    // this.rootNode.find('.quiz__steps').hide();
     this.rootNode.find('.quiz__steps').hide();
     this.rootNode.find('.quiz__controls').hide();
     this.rootNode.find('.quiz__r-side').hide();
-    this.finalBlock.show();
+    this.rootNode.find('.quiz-questions__load-block').show();
+    // this.finalBlock.show();
+    const loadingBar = this.rootNode.find('.quiz-questions-loading__inner-bar');
+    const listItems = this.rootNode.find(".quiz-questions-loading__list-item");
+
+    let newWidth = 25;
+    let newTime = 500;
+
+    for (let i = 0; i < 4; i++) {
+      // barTick(newTime, newWidth, i);
+      barTick.call(this, newTime, newWidth, i, listItems[i])
+
+      newWidth += 25;
+      newTime += 1000;
+    }
+
+    function barTick(time, width, tick, litem) {
+      setTimeout(() => {
+        loadingBar.css("width", `${width}%`);
+        
+        setTimeout(() => {
+          litem.classList.add("quiz-questions-loading__list-item--active");
+        }, 300);
+      }, time);
+
+      if (tick === 3) {
+        setTimeout(() => {
+          this.rootNode.find('.quiz-questions__load-block').hide();
+          this.finalBlock.show();
+        }, time + 1000);
+      }
+    }
   }
 }
 

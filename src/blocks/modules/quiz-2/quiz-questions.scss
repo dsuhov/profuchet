@@ -72,9 +72,7 @@
       margin-bottom: 10px;
     }
 
-    &.quiz-questions__block-title--center {
-      text-align: center;
-    }
+    
   }
 
   &__input {
@@ -129,9 +127,7 @@
     }
   }
 
-  &__load-block {
-    display: none;
-  }
+  
 }
 
 @import "block-final";
