@@ -1,5 +1,58 @@
 .block-final {
   display: none;
+  position: relative;
+
+  &__img-w-text {
+    position: absolute;
+    top: -75px;
+    right: -24px;
+    width: 236px;
+    height: 332px;
+    background: url("../img/fb-bg-1_1x.png") no-repeat;
+    z-index: 500;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+    font-weight: 500;
+    font-size: 18px;
+    line-height: normal;
+    padding-left: 18px;
+
+    span {
+      margin-left: -9px;
+      max-width: 130px;
+      text-align: center;
+      border-radius: 10px;
+      height: 33px;
+      margin-top: auto;
+      display: block;
+      line-height: 33px;
+      background: linear-gradient(180deg, rgba(244, 208, 147, 1) 0%, rgba(250, 182, 70, 1) 50%);
+    }
+
+    @media (max-width: $laptop) {
+      width: 150px;
+      height: 240px;
+      background-size: 100%;
+      font-size: 14px;
+      
+
+      span {
+        margin-left: 0;
+        max-width: 100px;
+        height: 28px;
+        line-height: 28px;
+      }
+    }
+
+    @media (max-width: $size-tablet) {
+      display: none;
+    }
+  }
+
+  
 
   @media (max-width: 420px) {
     text-align: center;
@@ -15,32 +68,10 @@
   }
   
   &__bottom-line {
-    position: relative;
+    margin-bottom: 46px;
 
-    &::before {
-      position: absolute;
-      content: "";
-      width: 464px;
-      height: 517px;
-      background: url("../img/final-block-pic.png") no-repeat;
-      left: 312px;
-      top: -26px;
-    }
-    
-    @media (max-width: $size-big) {
-      &::before {
-        left: 320px;
-        top: 30px;
-        width: 300px;
-        height: calcHeight(464px, 517px, 300px);
-        background-size: 300px calcHeight(464px, 517px, 300px);
-      }
-    }
-
-    @media (max-width: $laptop) {
-      &::before {
-        display: none;
-      }
+    @media (max-width: $size-tablet) {
+      margin-bottom: 0;
     }
   }
 
@@ -48,7 +79,7 @@
     font-weight: 700;
     font-size: 30px;
     line-height: 38px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 
     @media (max-width: $laptop) {
       font-size: 24px;
@@ -62,7 +93,8 @@
     }
 
     @media (max-width: 420px) {
-      font-size: 16px;
+      font-size: 18px;
+      margin-bottom: 20px;
       br { display: none; }
     }
   }
@@ -116,11 +148,7 @@
   &__submit {
     font-weight: 500;
     font-size: 18px;
-    margin-top: 80px;
-
-    @media (max-width: 1024px) {
-      margin-top: 0;
-    }
+    
 
     @media (max-width: 600px) {
       font-size: 16px;
@@ -172,6 +200,7 @@
   }
 
   &__input {
+    
     outline: none;
     box-sizing: border-box;
     line-height: 50px;
@@ -190,6 +219,59 @@
     }
   }
 
+  &__input-wrapper {
+    position: relative;
+
+    &::before {
+      opacity: 0;
+      visibility: hidden;
+
+      content: "";
+      position: absolute;
+      z-index: 100;
+      top: -230px;
+      left: -460px;
+
+      width: 572px;
+      height: 617px;
+
+      background: url("../img/fb-bg-phone_1x.png") no-repeat;
+
+      @media (max-width: $size-big) {
+        display: none;
+      }
+    }
+
+    &.block-final__input-wrapper--show {
+      &::before {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    @media (max-width: $laptop) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 600px) {
+      max-width: 323px;
+
+      input {
+        height: auto;
+        padding: 11px 20px;
+      }
+    }
+
+    @media (max-width: $phone-portrait) {
+      max-width: 223px;
+
+      input {
+        width: 100%;
+        padding: 7px 15px;
+      }
+    }
+  }
+
   &__accept-conf {
     padding-top: 25px;
 
@@ -197,6 +279,68 @@
       text-align: left;
       padding-top: 20px;
       max-width: 215px;
+    }
+  }
+
+  &__inputs-line {
+    display: none;
+
+    &.block-final__inputs-line--active {
+      display: flex;
+    }
+
+    
+    justify-content: flex-end;
+    padding-top: 22px;
+    padding-right: 12.6%;
+
+    @media (max-width: $size-big) {
+      padding-right: 0;
+      justify-content: flex-start;
+    }
+
+    @media (max-width: $laptop) {
+      display: block;
+    }
+
+    @media (max-width: 420px) {
+      padding-top: 0;
+    }
+
+    
+  }
+
+  &__icol {
+    flex: 0 0 265px;
+
+    &:first-child {
+      margin-right: 22px;
+    }
+
+    
+
+    @media (max-width: 420px) {
+      input[type="submit"] {
+        height: 43px;
+        width: 223px;
+        margin: 0;
+        background-size: 100% 100%;
+        background-image: url("../img/y-btn-w223.png");
+      }
+
+      &:first-child {
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: $sm) {
+      input[type="submit"] {
+        height: 44px;
+        width: 184px;
+        margin: 0;
+        background-size: 100% 100%;
+        background-image: url("../img/y-btn-w184.png");
+      }
     }
   }
 }

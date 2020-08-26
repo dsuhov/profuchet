@@ -93,8 +93,9 @@
 }
 
 .yellow-btn.yellow-btn--quiz-final {
+  box-sizing: border-box;
   width: 323px;
-  height: 62px;
+  height: 56px;
   background: url("../img/y-btn-w323.png") no-repeat;
   box-shadow: 0px 0px 49.7px 20.3px rgba(246, 168, 0, 0.14);
   
