@@ -52,7 +52,7 @@
 
     &.quiz-popup {
       background-color: #fff;
-      display: flex;
+      // display: flex;
       padding: 40px 32px 20px;
 
       @media (max-width: $phone-portrait) {
@@ -87,9 +87,9 @@
   }
 
   &__r-side {
-    margin-left: auto;
-    width: 310px;
-    flex-shrink: 0;
+    // margin-left: auto;
+    // width: 310px;
+    // flex-shrink: 0;
 
     @media (max-width: $laptop) {
       display: none;
@@ -103,7 +103,7 @@
   }
 
   &__questions {
-    min-height: 300px;
+    min-height: 230px;
 
     @media (max-width: $size-tablet) {
       min-height: auto;
@@ -123,3 +123,5 @@
 @import "quiz-questions";
 @import "where-to-send";
 @import "quiz-questions-loading";
+@import "quiz-popup";
+@import "videos/pq-1videos";

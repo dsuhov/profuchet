@@ -287,6 +287,10 @@
 
     &.block-final__inputs-line--active {
       display: flex;
+
+      @media (max-width: $laptop) {
+        display: block;
+      }
     }
 
     
@@ -299,9 +303,7 @@
       justify-content: flex-start;
     }
 
-    @media (max-width: $laptop) {
-      display: block;
-    }
+    
 
     @media (max-width: 420px) {
       padding-top: 0;
