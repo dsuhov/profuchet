@@ -14,13 +14,13 @@
   }
 
   &__left-block {
-    flex: 1 1 auto;
+    flex: 0 1 auto;
   }
 
   &__right-block {
     margin-left: 40px;
     // width: 320px;
-    flex: 0 0 350px;
+    flex: 0 1 350px;
 
     @media (max-width: 900px) {
       margin-left: 0;
@@ -36,6 +36,10 @@
 
     @media (max-width:360px) {
       width: 195px;
+    }
+
+    @media (max-width: 420px) {
+      width: 100% !important;
     }
   }
   

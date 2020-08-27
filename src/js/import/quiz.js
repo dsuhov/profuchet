@@ -165,15 +165,15 @@ class Quiz {
         }, 300);
       }, time);
 
-      if (tick === 3) {
-        setTimeout(() => {
-          this.rootNode.find('.quiz-questions__load-block').hide();
-          this.finalBlock.show();
-          this.rootNode.find('.block-final__input-wrapper').addClass("block-final__input-wrapper--show");
-          this.rootNode.find('.block-final__inputs-line').addClass("block-final__inputs-line--active");
+      // if (tick === 3) {
+      //   setTimeout(() => {
+      //     this.rootNode.find('.quiz-questions__load-block').hide();
+      //     this.finalBlock.show();
+      //     this.rootNode.find('.block-final__input-wrapper').addClass("block-final__input-wrapper--show");
+      //     this.rootNode.find('.block-final__inputs-line').addClass("block-final__inputs-line--active");
           
-        }, time + 300);
-      }
+      //   }, time + 300);
+      // }
     }
   }
 }

@@ -231,10 +231,12 @@
 
   &__y-btn {
     width: 100%;
-    background: url("../img/y-btn-w230.png") no-repeat;
+    background: url("../img/y-btn-w315-95.png") no-repeat;
+    
 
     @media (max-width: $size-tablet) {
       height: 78px;
+      background: url("../img/y-btn-w230.png") no-repeat;
     }
   }
 }
