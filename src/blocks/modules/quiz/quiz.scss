@@ -67,6 +67,10 @@
     @media (max-width: $phone-portrait) {
       padding: 15px 4px;
     }
+
+    &.quiz__content--final {
+      display: block;
+    }
   }
 
   &__steps {
