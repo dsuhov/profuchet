@@ -12,6 +12,8 @@ class Quiz {
     
     this.scaleItems = this.rootNode.find(".quiz-steps__scale-item");
     this.blocks = this.rootNode.find(".quiz-questions__block");
+
+    this.videos = this.rootNode.find(".pq-1videos__video");
     
     this.currStep = 0;
     this.textLength = 4;
@@ -61,7 +63,24 @@ class Quiz {
       this.updateStepTitle();
       this.updateStepScale();
       this.checkPrevBtnInterval();
+      this.updateVideo();
     }
+  }
+
+  updateVideo() {
+    this.videos.hide();
+
+    const currSt = this.currStep;
+
+    this.videos.each(function() {
+      const videoCopy = $(this).children().clone();
+      $(this).children().remove("iframe");
+      $(this).append(videoCopy);
+      
+      if ($(this).data("video") == currSt) {
+        $(this).show();
+      }
+    });
   }
   
   prevStep() {
@@ -71,6 +90,7 @@ class Quiz {
       this.updateStepTitle();
       this.updateStepScale();
       this.checkPrevBtnInterval();
+      this.updateVideo();
     }
   }
   
@@ -114,6 +134,8 @@ class Quiz {
     this.rootNode.find('.quiz__steps').hide();
     this.rootNode.find('.quiz__controls').hide();
     this.rootNode.find('.quiz__r-side').hide();
+    this.rootNode.find('.quiz-popup__right-block').hide();
+    this.rootNode.find('.quiz-desk-v__r-side').hide();
     this.rootNode.find('.quiz-questions__load-block').show();
     
     this.rootNode.find('.quiz__content').addClass("quiz__content--final");
@@ -121,6 +143,8 @@ class Quiz {
     // this.finalBlock.show();
     const loadingBar = this.rootNode.find('.quiz-questions-loading__inner-bar');
     const listItems = this.rootNode.find(".quiz-questions-loading__list-item");
+    this.rootNode.find('.quiz-popup__down-block').addClass("quiz-popup__down-block--final");
+    this.rootNode.find('.quiz-desk-v').addClass("quiz-desk-v--final");
 
     let newWidth = 25;
     let newTime = 500;
@@ -181,7 +205,7 @@ $(document).ready(function() {
       setTimeout(() => {
         $.magnificPopup.open({
           items: {
-            src: '#exit-popup'
+            src: '#new-exit-popup'
           },
           // type: 'inline',
           showCloseBtn: false

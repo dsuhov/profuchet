@@ -1,0 +1,23 @@
+.pq-1videos {
+
+  &__video {
+    position: relative;
+    display: none;
+    padding-bottom: 56.25%;
+
+    border-radius: 16px;
+    overflow: hidden;
+
+    &:first-child {
+      display: block;
+    }
+
+    & > iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+}

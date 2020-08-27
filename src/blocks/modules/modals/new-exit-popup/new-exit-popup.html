@@ -1,0 +1,51 @@
+<div class="new-exit-popup">
+
+  <div class="new-exit-popup__content">
+    <p class="new-exit-popup__title-1">Получите 3 чек-листа,</p>
+    <p class="new-exit-popup__title-2">благодаря которым  вы уже сегодня <br>залатаете дыры в  бухгалтерии <br>и будете всегда готовы к приходу <br>налоговой или УБЭП</p>
+
+    <p class="new-exit-popup__title-3">Как удобнее получить материалы?</p>
+
+    <form action="sendmail/send.php" method="post" class="new-exit-popup__form" onsubmit="ym(54700270, 'reachGoal', 'EX_POPUP_FILLED'); return true;">
+
+      <div class="new-exit-popup__line">
+        <input type="radio" name="Куда_прислать?" value="WhatsApp" id="send-to-whattsapp-5" class="new-exit-popup__input">
+        <label for="send-to-whattsapp-5" class="new-exit-popup__label">WhatsApp
+          @@include("./icons/w-app.html")
+        </label>
+
+        <input type="radio" name="Куда_прислать?" value="Viber" id="send-to-viber-5" class="new-exit-popup__input">
+        <label for="send-to-viber-5" class="new-exit-popup__label">Viber
+          @@include("./icons/viber.html")
+        </label>
+      </div>
+
+      <div class="new-exit-popup__line">
+        <input type="radio" name="Куда_прислать?" value="Telegram" id="send-to-telegram-5" class="new-exit-popup__input">
+        <label for="send-to-telegram-5" class="new-exit-popup__label">Telegram
+          @@include("./icons/telegram.html")
+        </label>
+
+        <input type="radio" name="Куда_прислать?" value="SMS" id="send-to-phone-5" class="new-exit-popup__input">
+        <label for="send-to-phone-5" class="new-exit-popup__label">Телефон
+          @@include("./icons/phone.html")
+        </label>
+      </div>
+
+      <div class="new-exit-popup__line new-exit-popup__line--wide">
+        <input type="tel" class="block-final__input" id="q4_phone" name="phone" placeholder="+7(___)___-__-__" required>
+      </div>
+
+      <div class="new-exit-popup__btn">
+        <input type="submit" class="new-exit-popup__submit yellow-btn" name="Получить материалы" value="Получить материалы">
+        <input name='reason' type='hidden' value='Получить материалы'>
+      </div>
+
+      <div class="accept-conf new-exit-popup__accept-conf">
+        <input type="checkbox" id="accept-conf-4" class="accept-conf__input" name="accept-confidentiality" required checked>
+        <label for="accept-conf-4" class="accept-conf__label">Согласен с политикой конфиденциальности сайта</label>
+      </div>
+
+    </form>
+  </div>
+</div>

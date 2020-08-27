@@ -10,22 +10,6 @@ if (document.querySelector('.yellow-btn--s-top')) {
     items: {
       src: '#popup-quiz',
       type: 'inline'
-    },
-    callbacks: {
-      close: function() {
-        // $.magnificPopup.open({
-        //   items: {
-        //     src: '#exit-popup'
-        //   },
-        //   type: 'inline',
-        //   showCloseBtn: false
-        // }, 0);
-        console.log('sdf')
-      },
-      open: function() {
-        console.log('sffef');
-        
-      }
     }
   });
   
@@ -38,9 +22,9 @@ if (document.querySelector('.yellow-btn--s-top')) {
     setTimeout(() => {
       $.magnificPopup.open({
         items: {
-          src: '#exit-popup'
+          src: '#new-exit-popup'
         },
-        // type: 'inline',
+        type: 'inline',
         showCloseBtn: false
       });
     }, 300)

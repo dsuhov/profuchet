@@ -1,0 +1,44 @@
+.quiz-desk-v {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
+
+  &.quiz-desk-v--final {
+    display: block;
+  }
+
+  &__lside {
+    flex: 0 1 auto;
+  }
+
+  &__r-side {
+    margin-left: 5px;
+    // width: 320px;
+    flex: 0 1 350px;
+
+    
+
+    @media (max-width: 900px) {
+      margin-left: 0;
+      width: 350px;
+      margin-bottom: 20px;
+      order: -1;
+      flex: 1 1 auto;
+    }
+
+    @media (max-width: 600px) {
+      width: 300px;
+    }
+
+    @media (max-width:360px) {
+      width: 195px;
+    }
+
+    @media (max-width: 420px) {
+      width: 100% !important;
+    }
+  }
+}
