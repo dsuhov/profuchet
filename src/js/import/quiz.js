@@ -204,7 +204,7 @@ $(document).ready(function() {
       setTimeout(() => {
         $.magnificPopup.open({
           items: {
-            src: '#exit-popup'
+            src: '#new-exit-popup'
           },
           // type: 'inline',
           showCloseBtn: false
