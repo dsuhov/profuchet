@@ -5,4 +5,5 @@ import "%modules%/quiz/block-final";
 import "%modules%/quiz/popup-quiz";
 import "%modules%/sections/s-what-get-bottom/adv-card/adv-card";
 import "%modules%/modals/left-phone/left-phone";
-import "%modules%/modals/exit-popup/exit-popup";
+import "%modules%/modals/new-exit-popup/new-exit-popup";
+import "%modules%/fake-video/fake-video";
