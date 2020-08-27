@@ -19,10 +19,6 @@
   </div>
 
   <div class="quiz__content quiz-popup">
-    <div class="quiz__r-side">
-      <p class="quiz__r-side-title">По итогам теста вы получите</p>
-      @@include("../blanks-block/blanks-block-qiuz.html")
-    </div>
     <div class="quiz__l-side">
       <div class="quiz__steps quiz-popup">
         <div class="quiz-steps__title">Шаг  <span class="quiz-steps__current-num">1</span> из 5</div>
@@ -35,14 +31,8 @@
         </div>
       </div>
 
-      <div class="quiz__questions quiz-questions quiz-popup__down-block">
-        <div class="quiz-popup__left-block">
-          @@include("../quiz-2/quiz-questions-2.html")
-        </div>
-        
-        <div class="quiz-popup__right-block">
-          @@include("./videos/videos.html")
-        </div>
+      <div class="quiz__questions quiz-questions">
+        @@include("./quiz-questions-2.html")
       </div>
 
       <div class="quiz__controls quiz-controls">
@@ -50,6 +40,9 @@
         <button class="quiz-controls__btn-return quiz-controls__btn-return--hidden">Назад</button>
       </div>
     </div>
-    
+    <div class="quiz__r-side">
+      <p class="quiz__r-side-title">По итогам теста вы получите</p>
+      @@include("../blanks-block/blanks-block-qiuz.html")
+    </div>
   </div>
 </div>

@@ -52,7 +52,7 @@
 
     &.quiz-popup {
       background-color: #fff;
-      // display: flex;
+      display: flex;
       padding: 40px 32px 20px;
 
       @media (max-width: $phone-portrait) {
@@ -91,9 +91,9 @@
   }
 
   &__r-side {
-    // margin-left: auto;
-    // width: 310px;
-    // flex-shrink: 0;
+    margin-left: auto;
+    width: 310px;
+    flex-shrink: 0;
 
     @media (max-width: $laptop) {
       display: none;
