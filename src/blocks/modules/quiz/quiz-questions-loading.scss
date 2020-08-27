@@ -7,7 +7,6 @@
   }
 
   &__rside {
-    background-color: aqua;
     width: 40%;
   }
 
@@ -29,9 +28,13 @@
     height: 10px;
     border-radius: 5px;
     background-color: #ecedee;
-    margin-bottom: 10px;
+    margin-bottom: 10px; 
+  }
 
-    
+  &__img {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(50, 50, 50, 0.3);
   }
 
   &__items {
@@ -57,7 +60,7 @@
     position: relative;
     cursor: pointer;
     line-height: 26px;
-    height: 26px;
+    // height: 26px;
     padding-left: 46px;
 
     &:not(:last-child) {

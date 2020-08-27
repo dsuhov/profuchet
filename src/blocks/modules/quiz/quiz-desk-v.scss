@@ -1,0 +1,17 @@
+.quiz-desk-v {
+  display: flex;
+  justify-content: space-between;
+
+  &.quiz-desk-v--final {
+    display: block;
+  }
+
+  &__lside {
+
+  }
+
+  &__r-side {
+    flex: 0 0 400px;
+    margin-left: 20px;
+  }
+}
