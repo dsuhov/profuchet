@@ -184,35 +184,82 @@
       </div>
     </div>
 
+    <!-- STEP 6 -->
+    <div class="quiz-questions__load-block">
+      <p class="quiz-questions__block-title quiz-questions__block-title--center">Система рассчитывает стоимость обслуживания.</p>
+      <div class="quiz-questions__loading quiz-questions-loading">
+        <div class="quiz-questions-loading__lside">
+          <div class="quiz-questions-loading__load-line">
+            <div class="quiz-questions-loading__bar">
+              <div class="quiz-questions-loading__inner-bar"></div>
+            </div>
+            <div class="quiz-questions-loading__items">
+              <div class="quiz-questions-loading__item">0%</div>
+              <div class="quiz-questions-loading__item">25%</div>
+              <div class="quiz-questions-loading__item">50%</div>
+              <div class="quiz-questions-loading__item">75%</div>
+              <div class="quiz-questions-loading__item">100%</div>
+            </div>
+          </div>
+
+          <div class="quiz-questions-loading__list">
+            <div class="quiz-questions-loading__list-item" data-list-item="0">Анализируем форму налогообложени</div>
+            <div class="quiz-questions-loading__list-item" data-list-item="1">Определяем количество сотрудников и операций</div>
+            <div class="quiz-questions-loading__list-item" data-list-item="2">Рассчитываем стоимость для вашей области</div>
+          </div>
+        </div>
+        <div class="quiz-questions-loading__rside">
+          <img src="img/fvid-pic.jpg" alt="" class="quiz-questions-loading__img" />
+        </div>
+      </div>
+    </div>
+
     <!-- BLOCK FINAL -->
     <div class="quiz-questions__block-final block-final">
       <div class="block-final__top-titles">
-        <h2 class="block-final__title-1">Сейчас наш бухгалтер рассчитает<br> вашу экономию за счет аутсорса бухгалтерии</h2>
-        <p class="block-final__title-2">Оставьте ваши данные, чтобы мы прислали вам расчет экономии, стоимость сопровождения и полезные материалы</p>
+        <h2 class="block-final__title-1">Расчет завершен. <br>Куда вам его прислать?</h2>
       </div>
       
       <div class="block-final__bottom-line">
-        <p class="block-final__title-3">Также мы закрепим за вами скиду 50% <br>на первый месяц обслуживания</p>
-
-        <div class="block-final__input-field">
-          <label for="q2_phone" class="block-final__label">К какому номеру привязать скидку?</label>
-          <input type="tel" class="block-final__input" id="q2_phone" name="phone" placeholder="+7(___)___-__-__" required>
+        <div class="block-final__img-w-text">
+          <span>скидка 50%</span>на первый месяц обслуживания
         </div>
 
-        <div class="block-final__input-field">
-          <label for="q2_phone" class="block-final__label">Куда отправить расчеты и материалы?</label>
-          <input type="email" class="block-final__input" id="q2_email" name="email" placeholder="Ваша почта" required>
-        </div>
+          <div class="block-final__where-to-send">
+            <input type="radio" name="Куда_прислать?" value="WhatsApp" id="send-to-whattsapp-1" class="block-final__wts-input">
+            <label for="send-to-whattsapp-1" class="block-final__wts-label block-final__wts-label-wattsapp">Пришлите расчет в WhatsApp</label>
 
-        <input type="submit" class="yellow-btn yellow-btn--quiz-final block-final__submit" name="submit" value="Получить расчет+материалы">
-        <input name='reason' type='hidden' value='Получить расчет+материалы'>
-        <div class="block-final__accept-conf">
-            <div class="accept-conf">
-                <input type="checkbox" id="accept-conf-1" class="accept-conf__input" name="accept-confidentiality" required checked>
-                <label for="accept-conf-1" class="accept-conf__label">Согласен с политикой конфиденциальности сайта</label>
-              </div>
+            <input type="radio" name="Куда_прислать?" value="Telegram" id="send-to-telegram-1" class="block-final__wts-input">
+            <label for="send-to-telegram-1" class="block-final__wts-label block-final__wts-label-telegram">Пришлите расчет в Telegram</label>
+
+            <input type="radio" name="Куда_прислать?" value="SMS" id="send-to-sms-1" class="block-final__wts-input">
+            <label for="send-to-sms-1" class="block-final__wts-label">Пришлите расчет ссылкой в SMS</label>
+
+            <input type="radio" name="Куда_прислать?" value="Viber" id="send-to-recall" class="block-final__wts-input">
+            <label for="send-to-recall" class="block-final__wts-label">Перезвоните, у меня остались вопросы</label>
+          </div>
+
         </div>
       </div>
       
+      <div class="block-final__inputs-line">
+          <div class="block-final__icol">
+            <div class="block-final__input-wrapper">
+              <input type="tel" class="block-final__input block-final__input--bgpic" id="q1_phone" name="phone" placeholder="+7(___)___-__-__" required>
+            </div>
+            
+          </div>
+
+          <div class="block-final__icol">
+            <input type="submit" class="yellow-btn yellow-btn--quiz-final block-final__submit" name="submit" value="Получить расчет">
+            <input name='reason' type='hidden' value='Получить расчет'>
+            <div class="block-final__accept-conf">
+              <div class="accept-conf">
+                <input type="checkbox" id="accept-conf-1" class="accept-conf__input" name="accept-confidentiality" required checked>
+                <label for="accept-conf-1" class="accept-conf__label">Согласен с политикой конфиденциальности сайта</label>
+              </div>
+            </div>
+          </div>
+      </div>   
     </div>
 </form>

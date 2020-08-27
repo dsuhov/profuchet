@@ -138,6 +138,8 @@ class Quiz {
     this.rootNode.find('.quiz-desk-v__r-side').hide();
     this.rootNode.find('.quiz-questions__load-block').show();
     
+    this.rootNode.find('.quiz__content').addClass("quiz__content--final");
+    
     // this.finalBlock.show();
     const loadingBar = this.rootNode.find('.quiz-questions-loading__inner-bar');
     const listItems = this.rootNode.find(".quiz-questions-loading__list-item");
@@ -171,7 +173,6 @@ class Quiz {
           this.finalBlock.show();
           this.rootNode.find('.block-final__input-wrapper').addClass("block-final__input-wrapper--show");
           this.rootNode.find('.block-final__inputs-line').addClass("block-final__inputs-line--active");
-          
         }, time + 300);
       }
     }
