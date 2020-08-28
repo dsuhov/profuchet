@@ -9,6 +9,10 @@
   background: #fff url("../img/ex-p-bg.jpg") no-repeat;
   background-position: left top 6px;
   background-size: 62.5% auto;
+
+  @media (max-width: 900px) {
+    background: #fff;
+  }
 }
 
 .new-exit-popup {
@@ -19,23 +23,53 @@
   z-index: 50;
   position: relative;
 
+  @media (max-width: $size-tablet) {
+    justify-content: center;
+  }
+
   &::before {
     z-index: 55;
     content: "";
     position: absolute;
-    left: 56px;
+    left: 6%;
     bottom: -60px;
 
-    width: 383px;
-    height: 610px;
+    width: 42.2%;
+    // height: 610px;
+    padding-bottom: 67.328%;
 
-    background: url("../img/ex-p-phone.png") no-repeat;
+    background: url("../img/ex-p-phone.png") center / 100% auto no-repeat;
+
+    @media (max-width: $laptop) {
+      left: 2%;
+    }
+
+    @media (max-width: 900px) {
+      width: 36%;
+      left: 0;
+    }
+
+    @media (max-width: $size-tablet) {
+      display: none;
+    }
   }
 
   &__content {
     flex: 0 0 256px;
     // width: 256px;
     padding: 66px 80px 80px 0;
+
+    @media (max-width: $size-tablet) {
+      padding: 40px;
+    }
+
+    @media (max-width: $phone-portrait) {
+      flex: 1 1 auto;
+    }
+
+    @media (max-width: $phone-portrait) {
+      padding: 20px 10px;
+    }
   }
 
   &__title-1 {
@@ -73,6 +107,11 @@
 
     &.new-exit-popup__line--wide {
       margin: 24px 0;
+
+      input {
+        padding: 0 20px;
+        height: 50px;
+      }
     }
   }
 
@@ -91,12 +130,31 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
+
     color: #323232;
     border: 1px solid rgba(#878787, 0);
 
     padding: 15px 0 15px 56px;
     transition-property: background-color, border;
     transition: 0.2s linear;
+
+    @media (max-width: $phone-portrait) {
+      width: 48%;
+    }
+
+    @media (max-width: 420px) {
+      font-size: 14px;
+      line-height: 16px;
+
+      padding: 10px 0 10px 45px;
+    }
+
+    @media (max-width: $sm) {
+      font-size: 12px;
+      line-height: 14px;
+  
+      padding: 10px 0 10px 40px;
+    }
   }
 
   &__input:checked + &__label {
@@ -110,30 +168,54 @@
     fill: #878787;
     top: calc(50% - 11px);
     left: 23px;
+
+    @media (max-width: 420px) {
+      left: 16px;
+    }
+
+    @media (max-width: $sm) {
+      top: calc(50% - 9px);
+    }
   }
 
   &__w-app {
     width: 22px;
     height: 22px;
 
-    left: 23px;
+    @media (max-width: $sm) {
+      width: 18px;
+      height: 18px;
+    }
   }
 
   &__viber {
     width: 23px;
     height: 24px;
 
-    left: 23px;
+    @media (max-width: $sm) {
+      width: 18px;
+      height: 19px;
+    }
   }
 
   &__telegram {
-    word-wrap: 2px;
+    width: 20px;
     height: 20px;
+
+    @media (max-width: $sm) {
+      width: 18px;
+      height: 18px;
+    }
   }
 
   &__phone {
     width: 20px;
     height: 20px;
+
+    @media (max-width: $sm) {
+      width: 18px;
+      height: 18px;
+    }
   }
 
   &__line--wide input {
@@ -142,6 +224,12 @@
 
   &__btn {
     margin-bottom: 26px;
+
+    @media (max-width: $phone-portrait) {
+      width: 230px;
+      margin: 0 auto;
+      margin-bottom: 26px;
+    }
   }
 
   &__submit {
@@ -154,6 +242,13 @@
     line-height: normal;
 
     box-shadow: 0px 0px 27.84px 4.16px rgba(246, 168, 0, 0.17);
+
+    @media (max-width: $phone-portrait) {
+      
+      width: 230px;
+      height: 50px;
+      background: url("../img/y-btn-w230-50.png") 100% no-repeat;
+    }
   }
 
   &__accept-conf {
