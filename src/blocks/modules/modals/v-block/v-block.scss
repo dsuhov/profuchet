@@ -1,0 +1,27 @@
+#v-block {
+  max-width: 948px;
+  margin: 0 auto;
+}
+
+.new-exit-popup {
+  &.v-block::before {
+    display: none;
+  }
+
+  &__content.v-block {
+    justify-content: flex-start;
+  }
+}
+
+
+.v-block {
+
+  &__lside {
+    flex: 1 1 auto;
+    padding: 66px 20px 0;
+
+    @media (max-width: $size-tablet) {
+      display: none;
+    }
+  }
+}

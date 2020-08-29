@@ -1,35 +1,41 @@
-<div class="new-exit-popup">
+<div class="new-exit-popup v-block">
+  <div class="v-block__lside">
+    <div class="fake-video__video">
+      <img src="img/f-vid-img.jpg" alt="Получить доступ к закрытому видео" class="fake-video__img">
+      <div class="fake-video__play"></div>
+    </div>
+  </div>
 
+  <div class="new-exit-popup__content v-block">
+    
 
-  <div class="new-exit-popup__content">
-    <p class="new-exit-popup__title-1">Получите 3 чек-листа,</p>
-    <p class="new-exit-popup__title-2">благодаря которым  вы уже сегодня <br>залатаете дыры в  бухгалтерии <br>и будете всегда готовы к приходу <br>налоговой или УБЭП</p>
+    <p class="new-exit-popup__title-1">Получите доступ к закрытому видео</p>
 
-    <p class="new-exit-popup__title-3">Как удобнее получить материалы?</p>
+    <p class="new-exit-popup__title-3">Куда отправить ссылку на видео?</p>
 
     <form action="sendmail/send.php" method="post" class="new-exit-popup__form" onsubmit="ym(54700270, 'reachGoal', 'EX_POPUP_FILLED'); return true;">
 
       <div class="new-exit-popup__line">
         <input type="radio" name="Куда_прислать?" value="WhatsApp" id="send-to-whattsapp-5" class="new-exit-popup__input">
         <label for="send-to-whattsapp-5" class="new-exit-popup__label">WhatsApp
-          @@include("./icons/w-app.html")
+          @@include("../new-exit-popup/icons/w-app.html")
         </label>
 
         <input type="radio" name="Куда_прислать?" value="Viber" id="send-to-viber-5" class="new-exit-popup__input">
         <label for="send-to-viber-5" class="new-exit-popup__label">Viber
-          @@include("./icons/viber.html")
+          @@include("../new-exit-popup/icons/viber.html")
         </label>
       </div>
 
       <div class="new-exit-popup__line">
         <input type="radio" name="Куда_прислать?" value="Telegram" id="send-to-telegram-5" class="new-exit-popup__input">
         <label for="send-to-telegram-5" class="new-exit-popup__label">Telegram
-          @@include("./icons/telegram.html")
+          @@include("../new-exit-popup/icons/telegram.html")
         </label>
 
         <input type="radio" name="Куда_прислать?" value="SMS" id="send-to-phone-5" class="new-exit-popup__input">
         <label for="send-to-phone-5" class="new-exit-popup__label">Телефон
-          @@include("./icons/phone.html")
+          @@include("../new-exit-popup/icons/phone.html")
         </label>
       </div>
 
@@ -38,8 +44,8 @@
       </div>
 
       <div class="new-exit-popup__btn">
-        <input type="submit" class="new-exit-popup__submit yellow-btn" name="Получить материалы" value="Получить материалы">
-        <input name='reason' type='hidden' value='Получить материалы'>
+        <input type="submit" class="new-exit-popup__submit yellow-btn" name="Получить материалы" value="Получить допступ">
+        <input name='reason' type='hidden' value='Получить допступ'>
       </div>
 
       <div class="accept-conf new-exit-popup__accept-conf">
