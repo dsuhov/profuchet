@@ -3,11 +3,11 @@ import magnificPopup from "magnific-popup";
 
 $(window.document).ready(function() {
 
-  $("#fake-video-btn").click(function() {
+  $("#fake-video-btn, .fake-video__video.btn").click(function() {
     $.magnificPopup.open({
       showCloseBtn: false,
       items: {
-        src: '#new-exit-popup',
+        src: '#v-block',
         type: 'inline'
       }
     });
