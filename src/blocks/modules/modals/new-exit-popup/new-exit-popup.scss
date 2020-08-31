@@ -158,7 +158,12 @@
   }
 
   &__input:checked + &__label {
-    background-color: #e7f7ff;
+    background-color: #3397cb;
+    color: #fff;
+
+    svg {
+      fill: #fff;
+    } 
     
     border: 1px solid rgba(#878787, 0.3);
   }
