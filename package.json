@@ -10,7 +10,7 @@
     "scripts": {
         "dev": "gulp",
         "build": "gulp prod --production",
-        "build views": "gulp views --production",
+        "build:views": "gulp views --production",
         "build styles": "gulp styles --production",
         "build scripts": "gulp scripts --production",
         "build images": "gulp images --production",
